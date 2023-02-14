@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/docs.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.css') }}">
+    <script src="{{ url_for('static', filename='javascript/jquerymin.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='javascript/jquery-3.6.0.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='javascript/jquery.Jcrop.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='javascript/chart.js')}}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <!-- <link rel="stylesheet " href='F:\mini_project_ml\static\css\style1.css'> -->
+
+
+</head>
+
+<body>
+    <div class="jumbotron" style="padding-left: 33%;">
+        <h1>Emotion detected</h1>
+    </div>
+    <div class="container limiter">
+        <div class="row">
+            {% for key,value in form_data.items() %}
+            <div class="card col-4 mr-1" style="width: 18rem;">
+                <img class="card-img-top" src="{{url_for('static', filename='image/'+key)}}" />
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{key}}:{{value}}</h5>
+                </div>
+            </div>
+            <!-- <h2> {{key}}</h2>
+            <p> {{value}}</p> -->
+            {% endfor %}
+        </div>
+        <footer></footer>
+
+
+    </div>
+    <div class="container">
+        <h2>Overall emotion </h2>
+
+        {% for key,value in duplicate_dict.items() %}
+        <label>{{key}}:{{value}}</label> {% endfor %}
+    </div>
+
+</body>
+
+</html>

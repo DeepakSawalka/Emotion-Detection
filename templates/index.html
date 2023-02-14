@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/docs.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <link rel="stylesheet " href='F:\mini_project_ml\static\css\style1.css'>
+    <script src="jquerymin.js " type="text/javascript "></script>
+    <script src="jquery-3.6.0.min.js " type="text/javascript "></script>
+    <script src="jquery.Jcrop.js " type="text/javascript "></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100 ">
+            <div class="wrap-login100 ">
+                <div class="login100-pic js-tilt " data-tilt>
+                    <img src="{{url_for('static', filename='icon1.jpg')}}" alt="IMG ">
+                </div>
+
+                <form class="login100-form " action="/data " method="POST">
+                    <span class="login100-form-title ">
+						Emotion Detection
+					</span>
+
+                    <div class="wrap-input100 ">
+                        <input class="input100 " type="email " name="email_id" placeholder="Email ">
+                        <span class="focus-input100 "></span>
+                        <span class="symbol-input100 ">
+							<i class="fa fa-envelope " aria-hidden="true "></i>
+						</span>
+                    </div>
+
+                    <div class="wrap-input100 ">
+                        <input class="input100" type="password" name="password_id" placeholder="Password " required>
+                        <span class="focus-input100 "></span>
+                        <span class="symbol-input100 ">
+							<i class="fa fa-lock " aria-hidden="true "></i>
+						</span>
+                    </div>
+                    <div class="wrap-input100 ">
+                        <input class="input100" type="text" name="meet_link" placeholder="Meet Link " required>
+                        <span class="focus-input100 "></span>
+                        <span class="symbol-input100 ">
+							<i class="fa fa-google " aria-hidden="true "></i>
+						</span>
+                    </div>
+
+                    <div class="container-login100-form-btn ">
+                        <input type="submit" value="Submit" class="login100-form-btn ">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
